@@ -1,0 +1,48 @@
+!DOCTYPE html
+html lang=en
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleHappy Birthday, Duda!title
+    style
+        body { 
+            text-align center; 
+            font-family Arial, sans-serif; 
+            background-color #fce4ec; 
+            padding 20px; 
+        }
+        h1 { color #d81b60; }
+        .container {
+            position relative;
+            display inline-block;
+            cursor pointer;
+        }
+        .gift {
+            width 200px;
+            transition opacity 0.5s ease-in-out;
+        }
+        .gift-card {
+            width 200px;
+            display none;
+        }
+    style
+head
+body
+    h1Happy Birthday, Duda! 🎉💖h1
+    pClick the present to reveal your surprise!p
+    div class=container onclick=revealGift()
+        img src=gift.png alt=Gift Box class=gift id=gift
+        img src=giftcard.png alt=Gift Card class=gift-card id=gift-card
+    div
+
+    script
+        function revealGift() {
+            document.getElementById('gift').style.opacity = 0;
+            setTimeout(() = {
+                document.getElementById('gift').style.display = none;
+                document.getElementById('gift-card').style.display = block;
+            }, 500);
+        }
+    script
+body
+html
